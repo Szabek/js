@@ -3,6 +3,7 @@ import Customer from "./Customer";
 import React from "react";
 import Person from "./Person";
 import Sites from "./Sites";
+import Planets from "./Planets";
 
 function App() {
     const data = {
@@ -28,11 +29,13 @@ function App() {
             description: "Link to amazon.com"
         }
     ];
+    const planets = [ 'Mars', 'Venus', 'Jupiter', 'Earth', 'Saturn', 'Neptune' ];
   return (
       <div>
         <Customer />
         <Person person={data}/>
         <Sites sites={sites} />
+        <Planets planets={planets} />
       </div>
   );
 }
