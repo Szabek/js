@@ -1,24 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import Customer from "./Customer";
+import React from "react";
+import Person from "./Person";
+import Sites from "./Sites";
 
 function App() {
+    const data = {
+        image: "https://i.ytimg.com/vi/kHjzuqq3b44/maxresdefault.jpg",
+        cardTitle: "Bob Dylan",
+        cardDescription: "Bob Dylan (born Robert Allen Zimmerman, May 24, 1941) is an American singer/songwriter, author, and artist who has been an influential figure in popular music and culture for more than five decades.",
+        button: {
+            url: "https://en.wikipedia.org/wiki/Bob_Dylan",
+            label: "Go to wikipedia"
+        }
+    };
+    const sites = [
+        {
+            link: "https://google.com",
+            description: "Link to google.com"
+        },
+        {
+            link: "https://facebook.com",
+            description: "Link to facebook.com"
+        },
+        {
+            link: "https://amazon.com",
+            description: "Link to amazon.com"
+        }
+    ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+        <Customer />
+        <Person person={data}/>
+        <Sites sites={sites} />
+      </div>
   );
 }
 
